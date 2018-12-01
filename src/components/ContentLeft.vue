@@ -1,12 +1,12 @@
 <template>
-    <section class="container-left">
+    <div class="container-left">
         <transition name="fade" model="out-in">
             <div v-if="show">
                 <div v-if="menuName === menuConstant.PRACTICE_CENTRE " key="Pc" style="margin-left: 15px;">
                     <div class="statis1">
                         <h2 class="statis-title">计划进度</h2>
                         <div class="statis1-plan-fixed">
-                            <div class="lh100 fz16">固定计划</div>
+                            <div class="fz16">固定计划</div>
                             <h1 class="lh100 statis1-percent-active" style="font-size: 36px;">4/10</h1>
                         </div>
                         <div class="statis1-plan-auto">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="statis2">
                         <h2 class="statis-title">特色活动占比</h2>
-                        <div style="height: 90%;margin-top: 15px;margin-left: 30px" id="statistic">
+                        <div style="height: 80%;margin-top: 15px;margin-left: 30px" id="statistic">
                         </div>
                     </div>
                     <div class="statis3">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </transition>
-    </section>
+    </div>
 </template>
 
 <script>
@@ -227,15 +227,14 @@ export default {
                 },
                 legend: {
                     orient: 'vertical',
-                    left: 'left',
                     data: ['其他活动', '特色活动'],
                     top: '10%',
-                    left: '3%',
-                    itemWidth: 10, //图例的宽度
-                    itemHeight: 10, //图例的高度
+                    left: '0',
+                    itemWidth: 8, //图例的宽度
+                    itemHeight: 8, //图例的高度
                     textStyle: { //图例文字的样式
                         color: 'black',
-                        fontSize: 16
+                        fontSize: 14
                     }
                 },
                 toolbox: {
@@ -255,7 +254,7 @@ export default {
                                 funnel: {
                                     x: '25%',
                                     width: '50%',
-                                    funnelAlign: 'center',
+                                    funnelAlign: 'left',
                                     max: 1548
                                 }
                             }
@@ -322,7 +321,9 @@ export default {
     opacity: 0;
 }
 .container-left {
-    width: 30%;
+    flex: 2;
+    display: inline-block;
+    position: relative;
 }
 
 </style>

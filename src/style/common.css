@@ -30,7 +30,6 @@
 }
 
 .map_top_nav .statis {
-  float: left;
   color: #e74c3c;
   padding: 1px 5px;
   font-size: 18px;
@@ -38,7 +37,6 @@
 }
 
 .map_top_nav .statis2 {
-  float: left;
   color: #fd8700;
   padding: 1px 5px;
   font-size: 18px;
@@ -46,7 +44,6 @@
 }
 
 .map_top_nav .statis3 {
-  float: left;
   color: #1be04e;
   padding: 1px 5px;
   font-size: 18px;
@@ -54,7 +51,6 @@
 }
 
 .map_top_nav a img {
-  float: left;
   width: 20px;
   height: 25px;
 }
@@ -136,12 +132,10 @@ label {
   height: 100%;
   width: 70%;
   /*padding: 2% 2% 2% 2%;*/
-  float: left;
 }
 
 .statis {
   height: 100%;
-  float: left;
 }
 
 .statis1 {
@@ -153,37 +147,35 @@ label {
     width: 100%;
     padding: 8px 0;
     margin: 10px 2px;
-    float: left;
     color:#fff;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,.15);
 }
 
 .statis1-plan-fixed {
-  width: 50%;
-  float: left;
-  text-align: center;
-  line-height: 100%;
-  height: 90%;
+  width: 45%;
+    height: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
   color:#4283d0;
 }
 
 .statis1-plan-fixed div {
-  text-align: center;
-  margin-top: 20%;
+  margin-top: 25%;
 }
 
 .statis1-plan-auto {
-  width: 50%;
-  float: left;
-  text-align: center;
-  line-height: 100%;
-  height: 90%;
+  width: 45%;
+    height: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
   color:#4283d0;
 }
 
 .statis1-plan-auto div {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 25%;
 }
 
 .statis2 {
@@ -196,7 +188,6 @@ label {
     width: 100%;
     padding: 8px 0;
     margin: 10px 2px;
-    float: left;
     color:#fff;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,.15);
 }
@@ -211,16 +202,14 @@ label {
   width: 100%;
     padding: 8px 0;
     margin: 10px 2px;
-  float: left;
   color:#fff;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,.15);
 }
 
 .statis-title {
-  background:url('../img/img_fenxiang.png') 60% 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+    background-size: cover;
+    background: url('../img/img_fenxiang.png') no-repeat 60% 100%;
+    background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   margin-top: -8px;
   font-size: 16px !important;
@@ -228,11 +217,11 @@ label {
   height:30px;
   line-height:30px;
   padding-left:2%;
-    margin-left: 15px
 }
 
 .lh100 {
   line-height: 100%;
+    margin-top: 12px;
 }
 
 .statis1-percent-active {
@@ -333,7 +322,6 @@ table th {
   padding: 5px 10px;
   filter: alpha(opacity=50);
   width: 20%;
-  float: left;
 }
 
 .map_bottom_nav2 {
@@ -344,7 +332,6 @@ table th {
   padding: 5px 10px;
   filter: alpha(opacity=50);
   width: 30%;
-  float: left;
 }
 
 .structure {
