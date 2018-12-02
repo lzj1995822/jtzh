@@ -1,8 +1,8 @@
 <template>
-    <div class="container-left">
+    <div :class="styleName">
         <transition name="fade" model="out-in">
             <div v-if="show">
-                <div v-if="menuName === menuConstant.PRACTICE_CENTRE " key="Pc" style="margin-left: 15px;">
+                <div v-if="menuName === menuConstant.PRACTICE_CENTRE " key="Pc" style="margin-left: 10px;">
                     <div class="statis1">
                         <h2 class="statis-title">计划进度</h2>
                         <div class="statis1-plan-fixed">
@@ -20,13 +20,13 @@
                         </div>
                     </div>
                     <div class="statis3">
-                        <h2 class="statis-title">介绍</h2>
+                        <h2 class="statis-title">实践中心介绍</h2>
                         <div class="statis-introduct">
                             党建工作职责指导做好党员的教育、管理和发展工作。研究和提出党员队伍建设的阶段性规划、意见和建议，督促基层党组织加强流动党员教育管理和服务工作。
                         </div>
                     </div>
                 </div>
-                <div v-if="menuName !== menuConstant.PRACTICE_CENTRE" key="pv" style="margin: 30px 30px;">
+                <div v-if="menuName !== menuConstant.PRACTICE_CENTRE" style="margin: 16px">
                     <el-button v-for="item in btnList" class="list-btn">{{item.name}}</el-button>
                 </div>
             </div>
@@ -172,7 +172,8 @@ export default {
                     }
                 ]
             },
-            show: true
+            show: true,
+            styleName: 'container-left'
         }
     },
     computed: {
@@ -195,9 +196,12 @@ export default {
             setTimeout( ()=> {
                 this.show = true;
                 if (this.menuName === this.menuConstant.PRACTICE_CENTRE) {
+                    this.styleName = 'container-left';
                     this.$nextTick(() => {
                         this.initSpecialActivityChart();
                     });
+                } else {
+                    this.styleName = 'container-left';
                 }
             }, 200)
         }
@@ -324,6 +328,10 @@ export default {
     flex: 2;
     display: inline-block;
     position: relative;
+    overflow: hidden;
+}
+.with-btn {
+    flex: 1.3;
 }
 
 </style>
