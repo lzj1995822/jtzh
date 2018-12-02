@@ -2,6 +2,9 @@
     <div id="render-map"></div>
 </template>
 <script>
+import imgBgCenter from '@/img/img_bg_center.png';
+import imgCenter from '@/img/img_center.png';
+
 export default {
     name: 'CMap',
     data() {
@@ -13,13 +16,21 @@ export default {
         initMap() {
             let map = new BMap.Map("render-map");
             let point = new BMap.Point(119.175146, 31.967351); //定位句容市
-            new BMap.Marker(point);
             map.centerAndZoom(point, 15);
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放 
-            new BMap.Icon("images/icon/1.png", new BMap.Size(35, 45), {
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+            let icon = new BMap.Icon(imgCenter, new BMap.Size(40, 40), {
                 anchor: new BMap.Size(10, 30),
                 infoWindowAnchor: new BMap.Size(10, 0)
             });
+            let marker = new BMap.Marker(point, { icon: icon });
+            map.addOverlay(marker);
+            icon = new BMap.Icon(imgBgCenter, new BMap.Size(100, 100), {
+                anchor: new BMap.Size(10, 30),
+                imgOffset:  new BMap.Size(0, 200),
+                infoWindowAnchor: new BMap.Size(10, 0)
+            });
+            marker = new BMap.Marker(point, { icon: icon });
+            map.addOverlay(marker);
         }
     },
     mounted() {

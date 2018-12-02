@@ -24,7 +24,7 @@ export default {
 <style>
 .main-content {
     flex: 7;
-    padding: 11px 10px 0 10px;
+    padding: 10px 10px 0 10px;
     position: relative;
     display: inline-block;
     transition:flex .5s linear;
