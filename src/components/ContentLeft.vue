@@ -16,7 +16,7 @@
                     </div>
                     <div class="statis2">
                         <h2 class="statis-title">特色活动占比</h2>
-                        <div style="height: 80%;margin-top: 15px;margin-left: 30px" id="statistic">
+                        <div style="width:270px; height: 150px;margin-top: 15px;margin-left: 30px" id="statistic">
                         </div>
                     </div>
                     <div class="statis3">
@@ -193,17 +193,14 @@ export default {
              * 太挫了，这个方式。。
              */
             this.show = false;
-            setTimeout( ()=> {
+            setTimeout( () => {
                 this.show = true;
                 if (this.menuName === this.menuConstant.PRACTICE_CENTRE) {
                     this.styleName = 'container-left';
-                    this.$nextTick(() => {
-                        this.initSpecialActivityChart();
-                    });
                 } else {
-                    this.styleName = 'container-left';
+                    this.styleName = 'container-left with-btn';
                 }
-            }, 200)
+            }, 100);
         }
     },
     methods: {
@@ -234,6 +231,7 @@ export default {
                     data: ['其他活动', '特色活动'],
                     top: '10%',
                     left: '0',
+                    width: 150,
                     itemWidth: 8, //图例的宽度
                     itemHeight: 8, //图例的高度
                     textStyle: { //图例文字的样式
@@ -256,8 +254,8 @@ export default {
                             type: ['pie', 'funnel'],
                             option: {
                                 funnel: {
-                                    x: '25%',
-                                    width: '50%',
+                                    x: '52%',
+                                    width: '70%',
                                     funnelAlign: 'left',
                                     max: 1548
                                 }
@@ -302,6 +300,9 @@ export default {
             chart.setOption(option);
         }
     },
+    updated() {
+        this.initSpecialActivityChart();
+    },
     mounted() {
         this.initSpecialActivityChart();
     }
@@ -329,6 +330,7 @@ export default {
     display: inline-block;
     position: relative;
     overflow: hidden;
+    transition:flex .5s linear;
 }
 .with-btn {
     flex: 1.3;
