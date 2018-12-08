@@ -17,7 +17,7 @@ export default {
                 PRACTICE_INSTITUTE: '实践所',
                 PRACTICE_STATION: '实践站',
                 PRACTICE_SITE: '实践点',
-                VOLUNTEER_CORPS: '支援服务队',
+                VOLUNTEER_CORPS: '志愿服务队',
                 SPECIAL_ACTIVITIES: '特色活动'
             }
         }
@@ -25,6 +25,7 @@ export default {
     methods: {
         updateMenuName(index) {
             this.$store.commit('updateMenuName', index);
+            this.$store.commit('updateLeftActive', 0);
         }
     }
 }

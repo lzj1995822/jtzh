@@ -1,7 +1,7 @@
 <template>
     <section class="app-main" style="min-height: 100%">
-        <content-left></content-left>
-        <main-content></main-content>
+        <content-left style="min-height: 100%"></content-left>
+        <main-content style="min-height: 100%"></main-content>
     </section>
 </template>
 
