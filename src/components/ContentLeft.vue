@@ -614,9 +614,12 @@ export default {
     }
   },
   updated() {
-    setTimeout(() => {
-      this.initSpecialActivityChart();
-    }, 1000);
+      if (this.menuName === this.menuConstant.PRACTICE_CENTRE) {
+          setTimeout(() => {
+              this.initChartpoint();
+              this.initChartpersent();
+          }, 1000);
+      }
   },
   created() {
     this.btnList();
